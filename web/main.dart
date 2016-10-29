@@ -1,10 +1,10 @@
-// Copyright (c) 2016, <your name>. All rights reserved. Use of this source code
-// is governed by a BSD-style license that can be found in the LICENSE file.
 
-import 'package:angular2/platform/browser.dart';
+import 'package:angular2/platform/browser.dart'; /*we need this for angular*/
 
-import 'package:angular_sample/app_component.dart';
+import 'package:angular_sample/app_component.dart'; /*here is where we import our own custom (main) component - by convention called app_component*/
 
-main() {
-  bootstrap(AppComponent);
+main() { /*this is just plain old dart - the main function is where we ''enter'' our dart application*/
+
+  bootstrap(AppComponent); /*this starts our custom (main) component - the component is called AppComponent and can be found in the file app_component.dart*/
+
 }
