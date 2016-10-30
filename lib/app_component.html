@@ -1,3 +1,13 @@
 <!-- This is just traditional html-->
 <!--there are some things that you would not see in 'normal' html, you should have a look at some of the oddities-->
-<h1>Off we Go!</h1>
+
+
+<h3>Nodes you can Choose from</h3>
+
+<ul class="nodeList"> <!--dont think this class name affects anything-->
+      <li *ngFor="let node of nodeList"
+        [class.selected]="node == selectedNode"
+        (click)="onSelect(node)" >
+        <span class="badge">{{node.name}}</span>
+    </li>
+</ul>

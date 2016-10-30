@@ -9,8 +9,8 @@ import 'nodeData.dart';
 import 'mock_data.dart';
 
 @Injectable()
-class HeroService {
-  Future<List<nodeData>> getHeroes() async => mockData; /*this method just gives us the mockdata that we created in the mockData.dart file*/
+class nodeService {
+  Future<List<nodeData>> getNodes() async => mockData ; /*this method just gives us the mockdata that we created in the mockData.dart file*/
   /* you might be wondering why we bother using this elaborate way of passing a simple list. The thruth is - we dont need to - but this will allow us to easily
   * expand the app and its data later on. If you want to keep it simple, just define the mockData List in the appComponent dart file!*/
 }
