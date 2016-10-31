@@ -67,7 +67,12 @@ class AppComponent implements OnInit {
   }
 
   void onSelect(nodeData node) { //this allows us to select a specific node from the list of nodes (see the html file for more info on how exactly we do that)
+                                 // this is called in our html file when we click on one of the elements in the list
     selectedNode = node;
+  }
+
+  gotoDetail(){
+    //EMPTY
   }
 
 }

@@ -2,12 +2,28 @@
 <!--there are some things that you would not see in 'normal' html, you should have a look at some of the oddities-->
 
 
-<h3>Nodes you can Choose from</h3>
+<h3>Nodes you can Choose from (Please caress them with your cursor)</h3>
 
+<!--this selection displays the contents of our nodeList, and allows us to select one of the items in the list -->
 <ul class="nodeList"> <!--dont think this class name affects anything-->
-      <li *ngFor="let node of nodeList"
+  <li *ngFor="let node of nodeList"
         [class.selected]="node == selectedNode"
-        (click)="onSelect(node)" >
-        <span class="badge">{{node.name}}</span>
-    </li>
+        (click)="onSelect(node)" > <!--the let node of nodeList is a little complex, but you can see it as a sort of  loop-->
+                                    <!--the nodeList name must match the List we have as a variable in the dart class, while the name ''node'' could be anything,
+                                    it is just a variable name, but we know at runtime it will be of type nodeData, as the list nodeList only contains nodeData
+                                    We also add a click handler which allows us to click a node and assign the clicked item to a local variable in our dart class.
+                                    Also take a good look where the brackets <> end in this initial statement: the <li opening tag ends after ''onselect(node)'> which is quite a long tag-->
+
+        <span class="badge">{{node.name}}</span> <!--as you can see we can just call a method of the node(which is of type nodeData) right from the html (do notice the {{}} notation through-->
+  </li>
 </ul>
+
+<!--if we have clicked any of the nodes, we get this small submenu that has a simple button-->
+<div *ngIf="selectedNode != null">  <!--notice that selectedNode is a thing in our dart file and we can just put boolean logic in our html file-->
+  <h3 style="color: green">
+      {{selectedNode.name}} is the Node I like  <!--this updates as soon as we change selectedNode, no weird listeners needed-->
+  </h3>
+  <button (click)="gotoDetail()">I want to know more about it!</button> <!--if button is clicked, then call method gotoDetail -->
+</div>
+
+
