@@ -5,7 +5,10 @@
 
 import 'nodeData.dart'; /*we need to import the nodeData so that this file can see nodeData as the class that we built*/
 
-final List<nodeData> mockData = [/*we just have a list of nodes to choose from See the dataService dart file for more info*/
+final List<nodeData> mockData = [/*we just have a list of nodes to choose from See the dataService dart file for more info
+                                   I hereby name the first value in the list (0) the probability of it being true and (1) the value of false.
+                                   This is just an example and it is just arbitrary - For dart its just a list with doubles - human interpretation
+                                   should be a probability distribtution*/
   new nodeData('Mr. Nice',[0.5,0.5]),
   new nodeData('Narco',[0.3,0.6]),
   new nodeData('Bombasto',[0.2,0.8]),

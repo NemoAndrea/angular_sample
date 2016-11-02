@@ -5,7 +5,7 @@
 <h3>Nodes you can Choose from (Please caress them with your cursor)</h3>
 
 <!--this selection displays the contents of our nodeList, and allows us to select one of the items in the list -->
-<ul class="nodeList"> <!--dont think this class name affects anything-->
+<ul class="nodeListUL"> <!--this class name is purely for css styling-->
   <li *ngFor="let node of nodeList"
         [class.selected]="node == selectedNode"
         (click)="onSelect(node)" > <!--the let node of nodeList is a little complex, but you can see it as a sort of  loop-->
@@ -21,6 +21,7 @@
 <!--if we have clicked any of the nodes, we get this small submenu that has a simple button-->
 <div *ngIf="selectedNode != null">  <!--notice that selectedNode is a thing in our dart file and we can just put boolean logic in our html file-->
   <h3 style="color: green">
+
       {{selectedNode.name}} is the Node I like  <!--this updates as soon as we change selectedNode, no weird listeners needed-->
   </h3>
   <button (click)="gotoDetail()">I want to know more about it!</button> <!--if button is clicked, then call method gotoDetail -->

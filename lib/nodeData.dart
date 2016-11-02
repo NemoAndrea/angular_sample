@@ -2,7 +2,7 @@
 
 class nodeData { //This is just a simple class with two properties: a name and an array
   String name;
-  List<double> probabilityDistribution;
+  List<double> probabilityDistribution; /*value (0)=change node is true, (1) = change node is false*/
 
   nodeData(this.name,this.probabilityDistribution); /*constructor of this class*/
 }
