@@ -1,5 +1,7 @@
 :host {
     font-family: Roboto, Helvetica, Arial, sans-serif;
 }
-
+button{
+    margin-left: 1em;
+}
 /*This couldn't get any more regular than regular css*/

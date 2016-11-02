@@ -10,19 +10,28 @@ import 'dart:html' show window; /*we need this to use the goBack method*/
 @Component( //This is how you indicate a component (notice that the brackets close after the html section - we write the various elements on seperate lines for convenience.
   selector: 'carddetail', //this indicates what html selector we are talking about. In this case it would be this tag: <nodeCard></nodeCard> (this can be seen in the main html file!)
 /* here we leave the html in the dart file rather than creating a separate html file*/
-  template:'''
-            <div class='mdl-card' *ngIf="node != null">
-
-              <h2>Node Name: {{node.name}}</h2>
-              <h3>Likeliness of being true: {{node.probabilityDistribution[0]}}</h3> <!-- we can see we can use dart syntax here - as long as we use the {{}} to tell angular its actually a dart thing}} -->
-              <h3>Likeliness of being false: {{node.probabilityDistribution[1]}}</h3>
-            </div>
-            <button (click)="goBack()">Back</button>
+  template:''' <!-- normally I would consider this too long to put in the dart file and would recommend moving it to a spearate html file, but this is to demonstrate this will work too! -->
+            <div  *ngIf="node != null"> <!-- we dont need this, but it is good to see we can just do this kind of logic in the html part -->
+              <div class="mdl-card mdl-shadow--8dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text"> {{node.name}}</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  Likeliness of being true: {{node.probabilityDistribution[0]}}<br>
+                  Likeliness of being false: {{node.probabilityDistribution[1]}}<br>
+                  <br>
+                  Thats all, folks
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"(click)="goBack()">Back</a>
+                </div>
+              </div>
+           </div>
             ''',
 /* here we leave the css in the dart file rather than creating a separate css file*/
   styles: const ['''
-            h2{
-              color: red;
+            .mdl-card{
+              z-index: 99999;
             }
            ''']) //this is the 'styling' of the application - THis means this is purely cosmetic, and will not actually influence the functionality of the app
 

@@ -22,21 +22,12 @@ import 'package:angular2/router.dart'; //this is for a more advanced navigation 
 // -------------------------- Angular Stuff ----------------------------
 @Component( //This is how you indicate a component (notice that the brackets close after the html section - we write the various elements on seperate lines for convenience.
     selector: 'my-app', //this indicates what html selector we are talking about. In this case it would be this tag: <my-app></my-app> (this can be seen in the main html file!)
-
-/* here we leave the html in the dart file rather than creating a separate html file*/
-    template: '''
-      <h1>Navigation</h1>
-      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-        <a href="#fixed-tab-1" class="mdl-layout__tab is-active" [routerLink]="['NodeList']">Take me to nodeList</a>
-        <a href="#fixed-tab-2" class="mdl-layout__tab" [routerLink]="['Hints']">View Hints</a>
-
-      </div>
-      <router-outlet></router-outlet>
-        ''',
-
+    templateUrl: 'app_component.html', //this is the 'structure' of the application - how the different components that you write will fit together
 /* here we leave the css in the dart file rather than creating a separate css file*/
     styles: const ['''
-                {
+                main{
+                  margin-left: 4em ;
+                  margin-top: 4em ;
 
                 }
                '''], //this is the 'styling' of the application - THis means this is purely cosmetic, and will not actually influence the functionality of the app

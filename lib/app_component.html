@@ -1,0 +1,18 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Navigation Header</span>
+
+            <div class="mdl-layout-spacer"></div>
+
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a href="#fixed-tab-1" class="mdl-layout__tab is-active" [routerLink]="['NodeList']">Take me to nodeList</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab" [routerLink]="['Hints']">View Hints</a>
+            </nav>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <router-outlet></router-outlet>
+    </main>
+</div>
