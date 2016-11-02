@@ -61,7 +61,8 @@ import 'package:angular2/router.dart'; //this is for a more advanced navigation 
       component: NodeListComponent,
       useAsDefault: true), /*this means this component will be loaded by default*/
   const Route( /*we dont make this one navigatable by our tabs, but we can get to it through NodeList - This shows we can do advanced navigation!*/
-      path: '/detail/:name',
+      path: '/detail/:name', //This :name notation indicates we are passing it a value that we will refer to as 'name' but we wont know what it will be exactly (we know it will be a string)
+                              // we can see this as passing a variable called 'name'. This value can later be retrieved by RouterParams.get. The value of :name will also be in the URL
       name: 'NodeDetail',// these names ALWAYS need to start with a capital letter, otherwise it starts throwing errors at you
       component: NodeDetailComponent),
   const Route(
