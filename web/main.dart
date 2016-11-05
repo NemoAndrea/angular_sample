@@ -2,7 +2,7 @@
 import 'package:angular2/platform/browser.dart'; /*we need this for angular*/
 
 import 'package:angular_sample/app_component.dart'; /*here is where we import our own custom (main) component - by convention called app_component*/
-import 'package:angular_sample/nodeData_service.dart';
+import 'package:angular_sample/node_data_service.dart';
 
 main() { /*this is just plain old dart - the main function is where we ''enter'' our dart application*/
 
